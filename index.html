@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Porsche</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-small.png" />
+   
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" style="background-color: white;">
+            <img img src="images/logo.png" style="width: 100px; z-index: 10;">
+        </a>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="pages/carrera.html">Carrera</a>
+            <a href="pages/panamera.html">Panamera</a>
+            <a href="pages/taycan.html">Taycan</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+    </div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="image">
+      <img src="images/taycan.png" style="width:100%">
+  </div>
+  <div class="text">Porsche Taycan</div>
+</div>
+
+<div class="mySlides fade">
+   <div class="image">
+       <img src="images/911.png" style="width:100%">
+   </div>
+  <div class="text">Porsche 911</div>
+</div>
+
+<div class="mySlides fade">
+   <div class="image">
+       <img src="images/panamera.png" style="width:100%">
+   </div>
+  <div class="text">Porsche Panamera</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<h1 class="separator">Top Models</h1>
+
+<div class="continer">
+    <img src="images/taycan-side.jpg" style="width: 400px;">
+
+    <div class="info">
+        <h1>Porsche Taycan</h1>
+        <div class="stats">
+            <img src="images/engine.png" style="width: 30px; margin-right: 10px;">
+            <h3>Electric</h3>
+        </div>
+        <div class="stats">
+            <img src="images/speed.png" style="width: 30px; margin-right: 10px;">
+            <h3>230km/h</h3>
+        </div>
+        <div class="stats">
+            <img src="images/power.png" style="width: 30px; margin-right: 10px;">
+            <h3>402hp</h3>
+        </div>
+        <a>Know more</a>
+    </div>
+</div>
+
+<div class="continer">
+    
+    <div class="info">
+        <h1>Porsche Carrera</h1>
+        <div class="stats">
+            <img src="images/engine.png" style="width: 30px; margin-right: 10px;">
+            <h3>Twin-turbo 3.0-liter flat-six-cylinder engine.</h3>
+        </div>
+        <div class="stats">
+            <img src="images/speed.png" style="width: 30px; margin-right: 10px;">
+            <h3>293km/h</h3>
+        </div>
+        <div class="stats">
+            <img src="images/power.png" style="width: 30px; margin-right: 10px;">
+            <h3>385hp</h3>
+        </div>
+        <a href="https://www.porsche.com/central-eastern-europe/en/_romania_/models/911/" target="_blank" >Know more</a>
+    </div>
+
+    <img src="images/carrera-side.jpg" style="width: 400px;">
+</div>
+
+<div class="continer">
+    <img src="images/panamera-side.jpg" style="width: 400px;">
+
+    <div class="info">
+        <h1>Porsche Panamera</h1>
+        <div class="stats">
+            <img src="images/engine.png" style="width: 30px; margin-right: 10px;">
+            <h3>Turbocharged 3.0-liter flat-six-cylinder engine.</h3>
+        </div>
+        <div class="stats">
+            <img src="images/speed.png" style="width: 30px; margin-right: 10px;">
+            <h3>270km/h</h3>
+        </div>
+        <div class="stats">
+            <img src="images/power.png" style="width: 30px; margin-right: 10px;">
+            <h3>330hp</h3>
+        </div>
+        <a href="https://www.porsche.com/central-eastern-europe/en/_romania_/models/panamera/" target="_blank" >Know more</a>
+    </div>
+</div>
+
+<div class="contact-text"><a>View source code</a></div>
+</body>
+<footer>
+    <div class="creators">
+        <h1><span>Author:</span> Moldovanu Artur</h1>
+        <h1><span>Assistant:</span> Moldovanu Alert-Andrei</h1>
+    </div>
+    <div class="f-text">
+        <h3>Contacts</h3>
+        <p>Mail: moldovanuarthur@gmail.com</p>
+        <p>Phone nr: +(373) 669 231 31</p>
+    </div>
+</footer>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "flex";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    <script>
+        var slideIndex = 0; 
+        showSlides();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex-1].style.display = "flex";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</html>
